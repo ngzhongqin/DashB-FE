@@ -57,7 +57,7 @@ app.controller('TaskListCtrl', function ($scope, $http) {
            method: 'POST',
            url: 'http://localhost:8080/tasks',
            headers: {
-             'Content-Type': "application/json"
+             'Content-Type': "text/plain"
            },
            data:{data: data}
           }
