@@ -31,10 +31,15 @@ var app = angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-      .when('/tasklist', {
-        templateUrl: 'views/tasklist.html',
-        controller: 'TaskListCtrl',
-        controllerAs: 'tasklist'
+      .when('/tasks', {
+        templateUrl: 'views/tasks/all.html',
+        controller: 'TasksCtrl',
+        controllerAs: 'tasks'
+      })
+      .when('/tasks/new', {
+        templateUrl: 'views/tasks/new.html',
+        controller: 'TasksNewCtrl',
+        controllerAs: 'tasksNew'
       })
       .otherwise({
         redirectTo: '/'
