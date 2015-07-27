@@ -41,6 +41,11 @@ var app = angular
         controller: 'TasksNewCtrl',
         controllerAs: 'tasksNew'
       })
+      .when('/stat/test', {
+        templateUrl: 'views/stat/test.html',
+        controller: 'StatTestCtrl',
+        controllerAs: 'statTest'
+      })
       .otherwise({
         redirectTo: '/'
       });
