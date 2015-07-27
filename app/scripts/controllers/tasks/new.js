@@ -8,14 +8,16 @@
  * Controller of the pssdashApp
  */
 
-app.controller('TasksNewCtrl', function ($scope, $http) {
+app.controller('TasksNewCtrl', function ($scope, $http, $location) {
 
 	$scope.submitPost = function () {
     console.log("TasksNewCtrl submitPost");
           var data = {
-              'email' : $scope.signup.email,
-              'password' : $scope.signup.password,
-              'full_name' : $scope.signup.full_name
+              'defect' : $scope.task.defect,
+              'incident' : $scope.task.incident,
+              'owner' : $scope.task.owner,
+              'description' : $scope.task.description,
+              'status' : $scope.task.status
           };
 
           var req = {
@@ -28,15 +30,15 @@ app.controller('TasksNewCtrl', function ($scope, $http) {
           }
 
 
-console.log("TaskNewCtrl submitPost req email:"+req.data.data.email);
-console.log("TaskNewCtrl submitPost req full_name:"+req.data.data.full_name);
-console.log("TaskNewCtrl submitPost req password:"+req.data.data.password);
+console.log("TaskNewCtrl submitPost req defect:"+req.data.data.defect);
+console.log("TaskNewCtrl submitPost req incident:"+req.data.data.incident);
+console.log("TaskNewCtrl submitPost req owner:"+req.data.data.owner);
+console.log("TaskNewCtrl submitPost req description:"+req.data.data.description);
 
 
           $http(req).success(function (data, status, headers, config) {
-                $scope.signup.email = data.email; 
-                $scope.signup.full_name = data.full_name; 
-                $scope.signup.password = data.password; 
+                console.log("TaskNewCtrl submitPost success");
+                $location.path('/tasks');
             }).error(function (data, status, headers, config) {
                 $scope.status = status + ' ' + headers;
             });
