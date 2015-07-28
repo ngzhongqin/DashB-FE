@@ -37,9 +37,9 @@
       <ul class="right">
 
             <li class="has-dropdown">
-              <a href="#">Incidents</a>
+              <a href="/#/dashboard/current">Dashboard</a>
               <ul class="dropdown">
-                <li><a href="#">WIP</a></li>
+                <li><a href="#">Previous</a></li>
                 <li ><a href="#">Closed</a></li>
               </ul>
             </li>
@@ -63,7 +63,17 @@
             </li>
 
         <li> <a href="/#/ssl">SSL</a></li>
-        <li> <a href="/#/stat/test">Statistics</a></li>
+
+            <li class="has-dropdown">
+              <a href="#">Statistics</a>
+              <ul class="dropdown">
+                <li><a href="/#/stat/test">Test1</a></li>
+                <li><a href="/#/stat/test2">Test2</a></li>
+                <li ><a href="#">Closed</a></li>
+              </ul>
+            </li>
+
+
 
       </ul>
 
@@ -118,14 +128,18 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/stickyFooter.js"></script>
+       
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/tasks/all.js"></script>
         <script src="scripts/controllers/tasks/new.js"></script>
+        <script src="scripts/controllers/dashboard/current.js"></script>
         <script src="scripts/controllers/stat/test.js"></script>
+        <script src="scripts/controllers/stat/test2.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/d3.v3.min.js"></script>
+        <script src="scripts/jquery.min.js"></script>
+         <script src="scripts/stickyFooter.js"></script>
         <!-- endbuild -->
 </body>
 </html>
